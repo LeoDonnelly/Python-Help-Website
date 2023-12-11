@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Intermediate Programs</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=python&amp;skin=sons-of-obsidian"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="index.html">Basic programs</a>
+    <a class="active" href="inter.html">Intermediate Programs</a>
+    <a href="adv.html">Advanced Programs</a>
+    <a href="chalage.html">Extra challenging Programs</a>
+    <a href="additionalhelp.html" class="split">Additional Help</a>
+  </div>
+  
+  <h1>Intermediate Python Programs</h1>
+
+  <h4>Lines cheat</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    sentace = ""
+    
+    sentace = input("What sentence would you like copied? \n")
+    
+    for i in range(20):
+      print(sentace)
+  </pre>
+  
+  <h4>Tyres to fit</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    name = ""
+    size = ""
+    numoftyre = 0
+    totalcost = 0
+    
+    name = input("Please enter your name \n")
+    size = input("Please enter tyre size (A,B or C) \n")
+    numoftyre = int(input("Please enter number of tyres \n"))
+    
+    
+    print(name, "\n")
+    
+    print("Size of tyre", size)
+    
+    if size == "A" or size == "a":
+      print("Cost of tyre", "50")
+      print("Number fitted", numoftyre)
+      totalcost = numoftyre*50
+    elif size == "B" or size == "b":
+      print("Cost of tyre", "70")
+      print("Number fitted", numoftyre)
+      totalcost = numoftyre*70
+    elif size == "C" or size == "c":
+      print("Cost of tyre", "90")
+      print("Number fitted", numoftyre)
+      totalcost = numoftyre*90
+    else:
+      print("Please enter valid information")
+    
+    
+    print("Total cost", "£" + str(totalcost))
+  </pre>
+
+  <h4>Charity Collection</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    firstamount = 0
+    secondamount = 0
+    thirdamount = 0
+    total = 0
+    doublede = 0
+    doubled2 = 0
+    doubled3 = 0
+    exess = 0
+    
+    firstamount = int(input("Please enter the first amount raised: \n"))
+    secondamount = int(input("Please enter the second amount raised: \n"))
+    thirdamount = int(input("Please enter the third amount raised: \n"))
+    
+    total = firstamount+secondamount+thirdamount
+    
+    print("A total of £" + str(total), "was raised")
+    
+    if total <1000:
+      doublede = total+100
+      for i in range(3):
+        print("With the company bonus, this is £" + str(doublede))
+    elif total >=1000:
+      doubled2 = total*2
+      for i in range(3):
+        print("With the company bonus, this is £" + str(doubled2))
+    elif total >=2000:
+      exess = total-2000
+      doubled3 = 2000*2+exess
+      for i in range(3):
+        print("With the company bonus, this is £" + str(doubled3))
+  </pre>
+
+  <h4>Name switch</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    #init
+    firstname = ""
+    secondname = ""
+    
+    #input
+    firstname = input("Please enter your first name \n")
+    secondname = input("Please enter your second name \n")
+    
+    #
+    for i in range(3):
+      print(firstname, secondname, firstname, secondname)
+      print(secondname, firstname, secondname, firstname)
+  </pre>
+
+  <h4>Cricket Over</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    score = 0
+    total = 0
+    
+    print("Please enter the score for each ball. \n")
+    for i in range(6):
+      score = int(input())
+    
+    total = score+score
+    
+    print("The over's score was:", total)
+  </pre>
+
+  <h4>Average Temperature</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    temperature = 0
+    average = 0 
+    total = 0
+    
+    print("Please enter a temperature: \n")
+    for x in range(7):
+      temperature = int(input())
+      total = temperature+total
+    
+    average = total/7
+    
+    print("The week's average was:")
+    print(average, "degrees centigrade")
+  </pre>
+
+  <h4>Lines cheat</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    message=""
+    timecoppied = 0
+    
+    message= input("Which sentence would you like copied?")
+    timecoppied = int(input("How many times would you like this to be copied?\n"))
+    
+    for x in range(timecoppied):
+      print(message)
+  </pre>
+
+  <h4>Charity Collection</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    charityraisers = 0
+    totaleach = 0
+    total = 0
+    doublede = 0
+    doubled2 = 0
+    doubled3 = 0
+    exess = 0
+    
+    charityraisers = int(input("Please enter how many charity raisers their were: \n"))
+    
+    print("Enter the total raised by each:")
+    for x in range(charityraisers):
+      totaleach = int(input())
+      total = totaleach+total
+    
+    
+    print("A total of £" + str(total), "was raised")
+    
+    if total <1000:
+      doublede = total+100
+      for i in range(3):
+        print("With the company bonus, this is £" + str(doublede))
+    elif total >=1000 and total <=1999:
+      doubled2 = total*2
+      for i in range(3):
+        print("With the company bonus, this is £" + str(doubled2))
+    elif total >=2000:
+      exess = total-2000
+      doubled3 = 2000*2+exess
+      for i in range(3):
+        print("With the company bonus, this is £" + str(doubled3))
+  </pre>
+
+  <h4>Pailwater Darts Tournament part 1</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    player1score = 0
+    player2score = 0
+    player1total = 0
+    player2total = 0
+    
+    print("Please enter the scores for player one:")
+    for x in range(3):
+      player1score = int(input())
+      player1total = player1score+player1total
+    
+    print("Please enter the scores for player two:")
+    for x in range(3):
+      player2score = int(input())
+      player2total = player2score+player2total
+    
+    print("Player one scored:", player1score)
+    print("Player two scored:", player2score)
+    
+    if player1score > player2score:
+      print("Player one wins!!!")
+    else:
+      print("Player two wins!!!")
+  </pre>
+
+  <h4>Press up challange</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    pupil = 0
+    total = 0
+    average = 0
+    
+    print("Enter the time in seconds for each pupil.")
+    for x in range(3):
+      print("Pupil", x+1)
+      pupil = int(input())
+      total = pupil+total
+    
+    average = total/3
+    
+    average = round(average, 2)
+    
+    print("The average time was:")
+    print(average, "seconds")
+  </pre>
+
+
+  
+  
+</body>
+
+</html>

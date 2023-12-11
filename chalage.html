@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Intermediate Programs</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=python&amp;skin=sons-of-obsidian"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="index.html">Basic programs</a>
+    <a href="inter.html">Intermediate Programs</a>
+    <a href="adv.html">Advanced Programs</a>
+    <a class="active" href="chalage.html">Extra challenging Programs</a>
+    <a href="additionalhelp.html" class="split">Additional Help</a>
+  </div>
+  
+  <h1>Extra challenging Python Programs</h1>
+
+  <h4>Enterprise club without arrays</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    group1 = 0
+    group2 = 0 
+    group3 = 0
+    total = 0
+    grp1quantityoforders = 0
+    grp1validformnumber = 0
+    grp1processordervalue = 0 
+    
+    grp2quantityoforders = 0
+    grp2validformnumber = 0
+    grp2processordervalue = 0
+    
+    grp3quantityoforders = 0
+    grp3validformnumber = 0
+    grp3processordervalue = 0
+    
+    grp1quantityoforders = int(input("Pleaes enter the quantity of orders for group 1 (1-30)\n"))
+    
+    for num in range(grp1quantityoforders):
+      grp1validformnumber = int(input("Please enter a valid form number\n"))
+      grp1processordervalue = float(input("Please enter the order value\n"))
+      group1 = group1+grp1processordervalue
+    
+    grp2quantityoforders = int(input("Pleaes enter the quantity of orders for group 2(31-60)\n"))
+    
+    for num in range(grp2quantityoforders):
+      grp2validformnumber = int(input("Please enter a valid form number\n"))
+      grp2processordervalue = float(input("Please enter the order value\n"))
+      group2 = group2+grp2processordervalue
+    
+    grp3quantityoforders = int(input("Pleaes enter the quantity of orders for group 3(61-90)\n"))
+    
+    for num in range(grp3quantityoforders):
+      grp3validformnumber = int(input("Please enter a valid form number\n"))
+      grp3processordervalue = float(input("Please enter the order value\n"))
+      group3 = group3+grp3processordervalue
+    
+    
+    total = group1+group2+group3
+    
+    print("Group Number", "Order Value (£)")
+    
+    print("1              ", group1)
+    print("2              ", group2)
+    print("3              ", group3)
+    
+    print("The total rasied for the project is £"+str(total))
+  </pre>
+
+  <h4>Enterprise club with arrays</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    groups = [0]*3
+    total = 0
+    quantityoforders = 0
+    validformnumber = 0
+    processordervalue = 0 
+    
+    quantityoforders = int(input("Pleaes enter the quantity of orders\n"))
+    
+    for num in range(quantityoforders):
+    	validformnumber = int(input("Please enter a valid form number\n"))
+    	processordervalue = float(input("Please enter the order value\n"))
+    
+    	if validformnumber >=1 and validformnumber <=30:
+    		groups[0]= groups[0] + processordervalue
+    	elif validformnumber >=31 and validformnumber <=60:
+    		groups[1]= groups[1] + processordervalue
+    	elif validformnumber >=61 and validformnumber <=90:
+    		groups[2]= groups[2] + processordervalue
+    	else:
+    		print("Invaild group/form number")
+    		
+    	
+    total = groups[0]+groups[1]+groups[2]
+    
+    print("Group Number", "Order Value (£)")
+    print("    1          ", groups[0])
+    print("    2          ", groups[1])
+    print("    3          ", groups[2])
+    print("The total rasied for the project is £"+str(total))
+  </pre>
+
+  <h4>Writing to a file</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    text = ""
+    
+    text = input("Please enter what you would like into the text file: \n")
+    
+    with open('file_to_save.txt', 'w') as open_file:
+    	open_file.write(text)
+  </pre>
+
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Advanced Programs</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=python&amp;skin=sons-of-obsidian"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="index.html">Basic programs</a>
+    <a href="inter.html">Intermediate Programs</a>
+    <a class="active" href="adv.html">Advanced Programs</a>
+    <a href="chalage.html">Extra challenging Programs</a>
+    <a href="additionalhelp.html" class="split">Additional Help</a>
+  </div>
+  
+  <h1>Advanced Python Programs</h1>
+
+  <h4>Number Patterns Part 2</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    start = 0
+    end = 0
+    
+    print("The following program will display odd numbers.")
+    
+    start = int(input("Enter the first number in the list \n"))
+    end = int(input("Enter the last number in the list \n"))
+    
+    print("Odd numbers list")
+    
+    for num in rance(start, end+1,2)
+    print(num)
+  </pre>
+
+  <h4>Advice please part 3</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    advice = ""
+    
+    advice = input("Would you like some advice? \n")
+    
+    while advice != "Y":
+    	print("Please enter Y or N only")
+    	advice = input("Would you like some advice? \n")
+    	
+    	if advice == "N":
+    		print("Don't be silly. You definetly need advice")
+    	else:
+    		print("Don't feed the trolls.")
+  </pre>
+
+  <h4>Pailwater Darts Tournament</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    p1score=0
+    p2score=0
+    total1=0
+    total2=0
+    
+    print("What was player ones score?")
+    for counter in range(3):
+    	p1score=int(input())
+    	while p1score < 0 or p1score >180:
+    		print("Invalid score! Enter again please:")
+    		p1score=int(input())
+    	total1=total1+p1score
+    
+    print("What was player twos score?")
+    for counter in range(3):
+    	p2score=int(input())
+    	while p2score < 0 or p2score >180:
+    		print("Invalid score! Enter again please:")
+    		p2score=int(input())
+    	total2=total2+p2score
+    
+    
+    print("Player ones score was",total1)
+    print("Player twos score was",total2)
+    
+    if total1>total2:
+      print("Player one wins!")
+    
+    elif total2>total1:
+      print("Player two wins!")
+    
+    elif total1==total2:
+      print("It was a draw")
+  </pre>
+
+  <h4>Average temprature</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    temp=0
+    totaltemp=0
+    average=0 
+    
+    print("What was the temperatures for each day")
+    
+    for counter in range(7):
+      temp=int(input())
+      while temp <-40 or temp >55:
+        print("Please enter a temperature between -40 and 55.")
+        temp=int(input())
+      totaltemp=totaltemp+temp
+    
+    average=totaltemp/7
+    
+    x = round(average,0)
+    
+    print("This weeks average,")
+    print("rounded to 0 decimal places was:")
+    print(x, "degrees centigrade")
+  </pre>
+
+  <h4>Guess the number part 2</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    import random
+    #initialising variables
+    guess = 0
+    random_number = 0
+    
+    random_number = random.randint(1, 100)
+    
+    while guess != random_number:
+    #input
+    	guess = int(input("Guess the hidden number between 1 and 100 \n"))
+    #if statements
+    	if guess > random_number:
+    		print("Too high!!")
+    
+    	elif guess == random_number:
+    		print("correct!")
+    	
+    	else:
+    		print ("Too low!!")
+  </pre>
+  
+  <h4>Tyre and break wear</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    testspeed = 0
+    teststopping = 0
+    
+    testspeed = float(input("Please enter the test speed (MPH) \n"))
+    
+    while testspeed <20:
+    	print("Sorry speed must be more than 20. Please enter agin")
+    	testspeed = float(input("Please enter the test speed (MPH) \n"))
+    
+    teststopping = float(input("Please enter the tested stopping distance (m) \n"))
+    
+    while teststopping <0:
+    	print("Sorry, Please enter a value greater than 0.")
+    	teststopping = float(input("Please enter the tested stopping distance (m) \n"))
+    
+    if testspeed == 20 and teststopping <= 6:
+    	print("Your car passed the brake test.")
+    	print("Well Done")
+    elif testspeed == 30 and teststopping <= 14:
+    	print("Your car passsed the brake test.")
+    	print("Well Done")
+    elif testspeed == 40 and teststopping <= 24:
+    	print ("Your car passed the brake test.")
+    	print("Well Done")
+    elif testspeed == 50 and teststopping <= 38:
+    	print("Your car passed the brake test.")
+    	print("Well Done")
+    elif testspeed == 60 and teststopping <= 55:
+    	print("Your car passed the brake test.")
+    	print("Well Done")
+    elif testspeed == 70 and teststopping <= 75:
+    	print("Your car passed the brake test.")
+    	print("Well Done")
+    else:
+    	print("Your car failed the braking distance test.")
+    	print("Submit your car for a tyre and brake test soon")
+  </pre>
+
+  <h4>No more presents</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    price = 0
+    total = 0
+    
+    while total <= 200:
+    	price = int(input("Please enter the price of each present:"))
+    	total = price+total
+    	print(total)
+    
+    if total > 200:
+    	print("Limit Exeeded")
+    	print("You will need to remove the", price, "one.")
+    elif total <= 200:
+    	print("You are able to get your presents")
+  </pre>
+
+  <h4>Press up challange</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    pupil = 0
+    total = 0
+    average = 0
+    
+    print("Enter the time in seconds for each pupil.")
+    for x in range(3):
+      print("Pupil", x+1)
+      pupil = int(input())
+      total = pupil+total
+    
+    average = total/3
+    
+    average = round(average, 2)
+    
+    print("The average time was:")
+    print(average, "seconds")
+  </pre>
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Basic Programs</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=python&amp;skin=sons-of-obsidian"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="index.html">Basic programs</a>
+    <a href="inter.html">Intermediate Programs</a>
+    <a href="adv.html">Advanced Programs</a>
+    <a href="chalage.html">Extra challenging Programs</a>
+    <a href="additionalhelp.html" class="split">Additional Help</a>
+  </div>
+  
+  <h1>Basic Python Programs</h1>
+
+  <h4>Three In, Three Out - Concatination</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    #init
+    name = ""
+    age = 0
+    TVProg = ""
+
+    #input
+    name = input("Please enter your name:")
+    age = int(input("Please enter your age:"))
+    TVProg = input("Please enter your favourite TV program:")
+
+    #output
+    print(name + " " + str(age))
+    print("Likes watching " + str(TVProg))
+  </pre>
+
+  <h4>Postcode Formater - Concatination</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    first_two = ""
+    third = 0
+    fourth = 0
+    final_two = 0
+
+    first_two = input("Please enter your first 2 letters of your postcode:")
+    third = int(input("Please enter your third letter/number of your postcode:"))
+    fourth = int(input("Please enter your fourth letter/ number of your postcode:"))
+    final_two = input("Please enter your final letters in your postcode:")
+
+    print(first_two + str(third) + str(fourth) + final_two)
+  </pre>
+  
+  <h4>Calcualte the are of a rectangle</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    rec1lenth = 0
+    rec1width = 0
+    rec2lenth = 0
+    rec2width = 0
+    rec1area = 0
+    rec2area = 0
+    
+    print("Please enter the following values in cm.")
+    print("Rectangle 1")
+    rec1lenth = int(input("Please enter the lenth: \n "))
+    rec1width = int(input("Please enter the width: \n"))
+    
+    print("Rectangle 2")
+    rec2lenth = int(input("Please enter the lenth: \n"))
+    rec2width = int(input("Please enter the width: \n"))
+    
+    rec1area = rec1lenth*rec1width
+    
+    rec2area = rec2lenth*rec2width
+    
+    if rec1area < rec2area:
+      print("Rectangle two has a larger area")
+    else:
+      print("Rectangle one has a larger area")
+  </pre>
+
+  <h4>Calcualte the area of a circle</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    radius = 0
+    area = 0
+    
+    print("Please enter the following values in cm.")
+    radius = int(input("Please enter the radius of the circle \n"))
+    
+    area = 3.14 * radius * radius
+    
+    print("The area of the circle is:")
+    print(area, "square centimetres")
+  </pre>
+
+  <h4>Calculating the atomic weight of hydrocarbons</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    carbonattom = 0
+    hydroatom = 0
+    mass = 0
+    
+    carbonattom = int(input("Enter the number of carbon atoms? \n"))
+    
+    hydroatom = (carbonattom*2)+2
+    mass = carbonattom*12+hydroatom
+    
+    print("The atomic mass of C" + str(carbonattom) + "H" + str(hydroatom), "is", str(mass))
+  </pre>
+
+  <h4>Standard Scratch</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    par3 = 0
+    par4 = 0
+    par5 = 0
+    dificultyajust = 0
+    standardscratch = 0
+    
+    par3 = int(input("How many par 3 holes are there? \n"))
+    
+    par4 = int(input("How many par 4 holes are there? \n"))
+    
+    par5 = int(input("How many par 5 holes are there? \n"))
+    
+    dificultyajust = int(input("What is the diffculty adjustment for the course? \n"))
+    
+    par3 = par3*3
+    par4 = par4*4
+    par5 = par5*5
+    
+    standardscratch = par3+par4+par5+dificultyajust
+    
+    print("The standard scratch for the course is:")
+    print(standardscratch)
+  </pre>
+
+  <h4>Formating an adress</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    housenum = 0
+    streetname = ""
+    town = ""
+    
+    housenum = int(input("What is your house number? \n"))
+    streetname = input("What is the name of your street? \n")
+    town = input("What town do you live in? \n")
+    
+    print(str(housenum)+",", streetname+",", town)
+  </pre>
+
+  <h4>Formating telephone numbers</h4>
+
+  <?prettify linenums=1?>
+  <pre class="prettyprint">
+    areacode = ""
+    localcode = 0
+    
+    areacode = input("Please enter an area code: \n")
+    localcode = int(input("Please enter the local code: \n"))
+    
+    print("You have entered:")
+    print(areacode, str(localcode))
+  </pre>
+
+
+  
+  
+</body>
+
+</html>
