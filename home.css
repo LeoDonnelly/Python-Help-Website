@@ -89,3 +89,8 @@ img {
     padding-left: 200px;
     padding-top: 100px;
 }
+footer {
+    margin: auto;
+    text-align: center;
+    clear:both;
+}

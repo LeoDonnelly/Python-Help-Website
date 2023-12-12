@@ -38,3 +38,8 @@ html, body {
 h1  {
 	text-align: center;
 }
+footer {
+  margin: auto;
+  text-align: center;
+  clear:both;
+}
